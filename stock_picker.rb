@@ -2,7 +2,7 @@ def stock_picker(days)
 	max = -1
 	ret = []
 	days.length.times do |x|
-		days.length.times do |y|
+		x.upto(days.length - 1) do |y|
 			if days[y] - days[x] > max and y > x
 				ret = [x, y]
 				max = days[y] - days[x]
